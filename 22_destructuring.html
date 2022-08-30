@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let student = ["ABC", "PQR", "XYZ"];
+        let [firstName, middleName, lastName] = student;
+        let txt =("First Name : " + firstName + " Middle Name : " + middleName + " Last Name : " + lastName);
+        document.write(txt);     
+        // document.getElementById("box1").innerHTML="ans1";
+
+        let address = ["village1", "Area1", 221311, "District1", "U.P.", "Police Station1", "Constituency"];
+        let [Village, , Pincode, District, State, ...other] = address;
+        document.write("Village : " + Village + ", District : " + District + ", Pincode :" + Pincode + ", State : " + State + ", other : " + other);
+       
+        let arr1=["A1","A2","A3"];
+        document.write(arr1);
+        document.write(...arr1);
+    </script>
+</head>
+
+<body style="text-align: center;font-size: 25px;">
+
+    <h1>Array Destructing</h1>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <h1>Object Destructing</h1>
+    <script>
+        let Alphabet1={
+          A1:"a",B1:"b",C1:"c",D1:"d"
+        };
+
+        let {A1,C1,B1,D1}=Alphabet1;
+        document.write(A1,B1,C1,D1);
+
+        let Alphabet2={
+          A2:"a",B2:"b",C2:"c",D2:"d"
+        };
+        let {A2,C2,...rest}=Alphabet2;
+        document.write(A2,C2,rest.B2,rest.D2)
+    </script>
+
+</body>
+
+</html>

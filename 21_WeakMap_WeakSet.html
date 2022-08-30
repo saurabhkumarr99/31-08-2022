@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let weakMap = new WeakMap();
+
+        let obj1 = {};
+        let obj2 = {};
+
+        weakMap.set(obj1, "value1");
+        weakMap.set(obj1, "value2");
+        weakMap.set(obj2, "value3");
+
+        document.write(weakMap.get(obj1));
+        document.write(weakMap.get(obj2));
+
+        
+
+        let firstWeakSet = new WeakSet();
+
+        let obj3 = {name : "ABC"};
+
+        firstWeakSet.add(obj3,"value4") 
+
+
+        document.write(firstWeakSet.get(obj3));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;font-size: 25px;">
+
+
+    <h1>Wrapping Method</h1>
+    <script>
+        let student = {
+            sname: "Student1",
+            fname: "Father1",
+            mname: "Mother1",
+            age: 27,
+
+            Student_info() {
+                document.write("Hello " + this.sname + " Welcome .Your father name is : " + this.fname + " and your Mother name is : " + this.mname + " and ypour age is :" + this.age);
+            }
+        }
+
+        setTimeout(function () {
+            student.Student_info();
+        },5000);
+    </script>
+    <h1>Binding Method</h1>
+</body>
+
+</html>
